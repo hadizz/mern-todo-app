@@ -61,11 +61,11 @@ const App = () => {
   return (
     <div className="container">
       <form onSubmit={formSubmitted}>
-        <label htmlFor="newTodo">:یک تسک وارد کنید</label>
         <input
           id="newTodo"
           name="newTodo"
           value={newTodo}
+          placeholder="یک تسک وارد کنید"
           onChange={onNewTodoChange}
         />
         <button>اضافه کن</button>
