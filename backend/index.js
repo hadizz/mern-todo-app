@@ -13,14 +13,15 @@ app.use(bodyParser.json());
 
 // routes
 app.get("/", (req, res) => {
-  res.send("hello😍, welcome to api");
-});
-
-app.get("/api/courses", (req, res) => {
-  res.send([1, 2, 3]);
+  res.send("hello😍, welcome to todo API");
 });
 
 // connect to db
+mongoose.connect(
+  process.env.DB_CONNECTION,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  () => console.log("connected to db")
+);
 
 // start listening to the server
 const port = process.env.PORT || 5000;
