@@ -1,5 +1,7 @@
 # Mern Todo App
 
+this is a MERN Todo App. Front end is React JS and Backend technologies is EXpress, Node.js, Mongo Database.
+
 ## TODOS
 
 - [x] Front end
@@ -14,3 +16,8 @@
   - [x] CRUD
 - [ ] Connect Front to Back
 - [ ] Redux
+
+### RESOURSES
+
+- Coding Garden With CJ | https://www.youtube.com/channel/UCLNgu_OupwoeESgtab33CCw
+- Dev Ed | https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q
