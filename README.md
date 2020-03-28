@@ -2,7 +2,6 @@
 
 this is a MERN Todo App. Front end is React JS and Backend technologies is EXpress, Node.js, Mongo Database.
 
-
 ## TODOS
 
 - [x] Front end
@@ -15,9 +14,8 @@ this is a MERN Todo App. Front end is React JS and Backend technologies is EXpre
   - [x] Create basic API with Express
   - [x] Create online database (https://www.mongodb.com/cloud/atlas)
   - [x] CRUD
-- [ ] Connect Front to Back
+- [x] Connect Front to Back
 - [ ] Redux
-
 
 ### Resources
 

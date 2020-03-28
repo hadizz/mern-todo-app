@@ -15,7 +15,9 @@ router.get("/", async (req, res) => {
 // add new todo to database
 router.post("/", async (req, res) => {
   const todo = new Todo({
-    description: req.body.description
+    id: req.body.id,
+    description: req.body.description,
+    done: false
   });
 
   try {
@@ -39,7 +41,7 @@ router.get("/:id", async (req, res) => {
 // delete a todo by id
 router.delete("/:id", async (req, res) => {
   try {
-    const removedTodo = await Todo.remove({ _id: req.params.id });
+    const removedTodo = await Todo.remove({ id: req.params.id });
     res.json({ status: 200, removedTodo });
   } catch (err) {
     res.json({ message: err });
@@ -50,8 +52,8 @@ router.delete("/:id", async (req, res) => {
 router.patch("/:id", async (req, res) => {
   try {
     const updatedTodo = await Todo.updateOne(
-      { _id: req.params.id },
-      { $set: { description: req.body.description } }
+      { id: req.params.id },
+      { $set: { description: req.body.description, done: req.body.done } }
     );
     res.json({ status: 200, message: updatedTodo });
   } catch (err) {
