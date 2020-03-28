@@ -1,6 +1,7 @@
 # Mern Todo App
 
 this is a MERN Todo App. Front end is React JS and Backend technologies is EXpress, Node.js, Mongo Database.
+![preview of todo list app](./todo-list.PNG)
 
 ## TODOS
 
