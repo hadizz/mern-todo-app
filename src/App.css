@@ -19,10 +19,12 @@ form {
   align-items: flex-end;
 
   background-color: rgb(214, 214, 214);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   padding: 10px;
   width: 250px;
   border-radius: 10px;
+
+  box-shadow: 0 30px 30px -20px rgb(0, 0, 0, 0.5);
 }
 
 input {
@@ -56,13 +58,10 @@ ul {
 }
 
 .todo {
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 10px;
-  border-color: rgb(41, 41, 41);
   direction: rtl;
-
-  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px -8px rgb(0, 0, 0, 0.5);
+  padding: 10px 15px 10px 20px;
   margin-bottom: 10px;
 }
 
@@ -75,5 +74,7 @@ span {
 }
 
 input[type="checkbox"] {
-  margin: 3px;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 10px;
 }
