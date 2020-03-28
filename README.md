@@ -12,4 +12,5 @@
   - [x] Create basic API with Express
   - [x] Create online database (https://www.mongodb.com/cloud/atlas)
   - [x] CRUD
+- [ ] Connect Front to Back
 - [ ] Redux
