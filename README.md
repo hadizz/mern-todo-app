@@ -3,6 +3,98 @@
 this is a MERN Todo App. Front end is React JS and Backend technologies is EXpress, Node.js, Mongo Database.
 ![preview of todo list app](./todo-list.PNG)
 
+## Running Locally
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+install [node.js](http://nodejs.org/)
+
+and clone the repo
+```
+git clone https://github.com/hadizz/mern-todo-app
+cd mern-todo-app
+```
+
+### Back End
+
+go to backend folder
+```
+cd backend
+```
+
+we need to initialize our project with a package.json file which will contain some information about our app and the dependencies which our app needs to run.
+
+using npm
+```
+npm init
+```
+or you can use `npm init -y` to use the default values.
+
+now we install dependencies for backend
+```
+npm install express body-parser cors dotenv mongoose nodemon
+```
+
+open package.json and add this script to scripts field:
+```
+"dev": "npx nodemon index.js"
+```
+*nodemon* - Auto-refresh the server on code change
+
+now you can run backend using
+```
+npm run dev
+```
+
+
+### Front End
+
+first go to project directory `mern-todo-app`
+
+install dependencies using npm
+```
+npm install
+```
+
+make sure to install [axios](https://github.com/axios/axios) using npm
+```
+npm install axios
+```
+*axios* - Promise based HTTP client for the browser and node.js
+
+you can run the app in development mode with
+```
+npm run start
+```
+
+and open http://localhost:3000 to view the result in browser
+
+### Run React-Frontend and Nodejs-Backend with one command
+
+in `mern-todo-app` directory install concurrently
+using npm
+```
+npm install --save-dev concurrently
+```
+now you can see it added to devDependencies.
+
+here we have to add proxy to devDependencies. for example in this project my backend is using port 5000.
+```
+"proxy": "http://localhost:5000"
+```
+
+and add these scripts to scripts field in package.json file:
+```
+"client": "npm start",
+"server": "cd backend && npm run dev",
+"dev": "concurrently \"npm run server\" \"npm run client\""
+```
+
+now we can run our mern project using
+```
+npm run dev
+```
+
 ## TODOS
 
 - [x] Front end
