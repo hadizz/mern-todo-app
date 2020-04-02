@@ -41,7 +41,23 @@ open package.json and add this script to scripts field:
 ```
 *nodemon* - Auto-refresh the server on code change
 
-now you can run backend using
+We are using Mongo DB as our database. You can Install mongodb and run mongo server or [Create a free MongoDB Atlas cluster](https://www.mongodb.com/cloud/atlas).
+
+after that, in `backend` folder create `.env` file
+```
+touch .env
+```
+
+and add your database config
+```
+/**
+ * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
+ * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
+ */
+DB_CONNECTION="mongodb+srv://<username>:<password>@<your-cluster-url>/test?retryWrites=true&w=majority";
+```
+
+✔️ now you can run backend using
 ```
 npm run dev
 ```
@@ -62,7 +78,7 @@ npm install axios
 ```
 *axios* - Promise based HTTP client for the browser and node.js
 
-you can run the app in development mode with
+✔️ you can run the app in development mode with
 ```
 npm run start
 ```
@@ -90,7 +106,7 @@ and add these scripts to scripts field in package.json file:
 "dev": "concurrently \"npm run server\" \"npm run client\""
 ```
 
-now we can run our mern project using
+✔️ now we can run our mern project using
 ```
 npm run dev
 ```
@@ -110,7 +126,7 @@ npm run dev
 - [x] Connect Front to Back
 - [ ] Redux
 
-### Resources
+## Resources
 
 - Coding Garden With CJ | https://www.youtube.com/channel/UCLNgu_OupwoeESgtab33CCw
 - Dev Ed | https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q
