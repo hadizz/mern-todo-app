@@ -1,16 +1,8 @@
 import React from "react";
 import "./todosHome.css";
 
-const tags = [
-  { name: "کار", color: "#001" },
-  { name: "دانشگاه", color: "#002" },
-  { name: "خرید", color: "#012" },
-  { name: "پروژه", color: "#101" },
-  { name: "ددلاین", color: "#456" },
-  { name: "ورزش", color: "#091" },
-  { name: "بهداشت", color: "#999" },
-  { name: "قرار", color: "#386" },
-];
+import { tags } from "../data/dataArray"
+
 
 function categories() {
   return (

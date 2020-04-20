@@ -9,8 +9,8 @@ export default function todo({ details }) {
         <span className="todobox-line1">{details.description}</span>
         <div className="todobox-line2">
           <div className="tag-info">
-            <FontAwesomeIcon icon={faTag} className="tag-icon" style={{ color: "orange" }} />
-            <span>خرید</span>
+            <FontAwesomeIcon icon={faTag} className="tag-icon" style={{ color: details.tag.color }} />
+            <span>{details.tag.name}</span>
           </div>
         </div>
       </div>
