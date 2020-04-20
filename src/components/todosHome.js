@@ -4,7 +4,7 @@ import "./todosHome.css";
 import HeaderSection from "./headerSection";
 import Categories from "./categories";
 import Upcoming from "./upcoming";
-import AddTodo from "./addTodo";
+import AddTodoBtn from "./addTodoBtn";
 
 function todosHome() {
   return (
@@ -12,7 +12,7 @@ function todosHome() {
       <HeaderSection />
       <Categories />
       <Upcoming />
-      <AddTodo />
+      <AddTodoBtn />
     </div>
   );
 }

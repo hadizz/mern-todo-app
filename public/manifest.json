@@ -1,6 +1,6 @@
 {
-  "short_name": "Todo App",
-  "name": "a simple todo app",
+  "short_name": "تودو لیست",
+  "name": "برنامه‌ای برای لیست کردن وظایفتان",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",

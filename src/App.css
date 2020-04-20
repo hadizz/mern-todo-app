@@ -1,3 +1,4 @@
+
 * {
   font-family: "Vazir", sans-serif;
   box-sizing: border-box;
@@ -26,7 +27,7 @@ form {
   /* width: 200px; */
   border-radius: 10px;
 
-  box-shadow: 0 30px 30px -20px rgb(0, 0, 0, 0.5);
+  /* box-shadow: 0 30px 30px -20px rgb(0, 0, 0, 0.5); */
 }
 
 .inputNewTask {
