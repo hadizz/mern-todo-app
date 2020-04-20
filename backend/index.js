@@ -27,7 +27,7 @@ mongoose.connect(
 
 // catch 404
 app.use((req, res, next) => {
-  res.status(404).send("<h2 align=center>Page Not Found!<h2>");
+  res.status(404).send("<h2 align=center>Page Not Found! :(<h2>");
 });
 
 // start listening to the server

@@ -14,20 +14,22 @@
 }
 
 form {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-end; */
+  direction: rtl;
 
   background-color: rgb(214, 214, 214);
   margin-bottom: 2rem;
   padding: 10px;
-  width: 250px;
+
+  /* width: 200px; */
   border-radius: 10px;
 
   box-shadow: 0 30px 30px -20px rgb(0, 0, 0, 0.5);
 }
 
-input {
+.inputNewTask {
   direction: rtl;
   padding: 5px 10px 5px 10px;
   margin: 5px 0 5px 0;
@@ -36,10 +38,10 @@ input {
   outline: none;
 }
 
-button {
+.addNewTaskButton {
   color: white;
   background-color: rgb(0, 132, 255);
-  padding: 7px 15px 7px 15px;
+  padding: 5px 10px 5px 10px;
   border: none;
   border-radius: 5px;
   outline: none;
@@ -50,6 +52,7 @@ ul {
 }
 
 .del {
+  color: white;
   background-color: red;
   padding: 3px 10px 3px 10px;
   border: none;
@@ -59,6 +62,9 @@ ul {
 
 .todo {
   direction: rtl;
+  display: flex;
+  max-width: 400px;
+
   border-radius: 10px;
   box-shadow: 0px 0px 25px -8px rgb(0, 0, 0, 0.5);
   padding: 10px 15px 10px 20px;
