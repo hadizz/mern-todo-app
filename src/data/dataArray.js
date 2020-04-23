@@ -1,12 +1,12 @@
 export const tags = [
     { name: "کار", color: "orange" },
     { name: "دانشگاه", color: "green" },
-    { name: "خرید", color: "yellow" },
+    { name: "خرید", color: "red" },
     { name: "پروژه", color: "blue" },
     { name: "ددلاین", color: "purple" },
     { name: "ورزش", color: "pink" },
     { name: "بهداشت", color: "lightblue" },
-    { name: "قرار", color: "#00fff2" },
+    { name: "قرار", color: "yellow" },
 ];
 
 export const todos = [

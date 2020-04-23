@@ -45,7 +45,7 @@ header {
   color: rgb(96, 103, 121);
 }
 
-.more {
+.more { 
   direction: rtl;
   flex: 1;
 }
@@ -119,9 +119,55 @@ header {
 .tag-icon{
   /* color: rgba(200, 200, 200); */
   position: relative;
-  top:4px;
+  top:8px;
   margin-left: 5px;
 }
+
+/* ------ new lines */ 
+
+.todoBox {
+  display: flex;
+  flex-direction: column;
+  border: 1.2px solid #eff0f5;
+
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 auto 0.9rem auto;
+}
+
+.todobox-line1 {
+  font-weight: bold;
+  direction: rtl;
+}
+.todobox-line2 {
+  display: flex;
+  flex-direction:row-reverse;
+  justify-content: space-between;
+}
+.tag-info{
+  direction: rtl;
+}
+
+.addTodoBtn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
+}
+.addTodoBtn button {
+  color: white;
+  font-size: 20px;
+  background-color: #12192e;
+  border-style: none;
+
+  padding:20px;
+  border-radius: 20px;
+
+}
+
+
+/* ------ new lines */ 
+
 
 /************************************************************************     P H O N E      */
 
@@ -172,6 +218,8 @@ header {
     bottom: 0;
     left: 0;
     right: 0;
+
+    margin:0;
   }
   .addTodoBtn button {
     width: 100%;
@@ -180,6 +228,9 @@ header {
     font-size: 20px;
     background-color: #12192e;
     border-style: none;
+
+    padding:0;
+    border-radius: 0;
   }
 
   /*            T O D O                */
@@ -218,7 +269,7 @@ header {
     flex: 1; */
   }
 
-  ::-webkit-scrollbar-track {
+  /* ::-webkit-scrollbar-track {
     -webkit-box-shadow: none !important;
     background-color: transparent;
   }
@@ -228,7 +279,7 @@ header {
   }
   ::-webkit-scrollbar-thumb {
     background-color: transparent;
-  }
+  } */
 }
 
 /*
