@@ -25,6 +25,8 @@ go to backend folder
 cd backend
 ```
 
+*NOTE* : You can easily run `npm install` or you can follow these instructions.
+
 we need to initialize our project with a package.json file which will contain some information about our app and the dependencies which our app needs to run.
 
 using npm
@@ -69,6 +71,8 @@ npm run dev
 ### Front End
 
 first go to project directory `mern-todo-app`
+
+*NOTE* : You can easily run `npm install` or you can follow these instructions.
 
 install dependencies using npm
 ```
