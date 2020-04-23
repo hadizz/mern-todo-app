@@ -2,10 +2,9 @@ import React, { useState, useCallback } from 'react'
 
 import { CirclePicker } from 'react-color';
 
-import './modal.css';
+import './addTodoModal.css';
 
-// import { tags } from '../data/dataArray'
-const tags = [];
+import { tags } from '../data/dataArray'
 
 const AddTodoModal = ({ isOpen, onClose }) => {
 
@@ -28,11 +27,11 @@ const AddTodoModal = ({ isOpen, onClose }) => {
                     <input placeholder="چه‌کاری‌می‌خواهیدانجام‌دهید؟"></input>
                     <select>
                         {tags.map((tag, index) => (
-                            <option value={tag.name}>{tag.name}</option>
+                            <option key={index} value={tag.name}>{tag.name}</option>
                         ))}
                     </select>
                 </form>
-                <span onClick={tagFormDoor} className="addNewTagTitleModal">ایجاد تگ جدید؟</span>
+                <span onClick={tagFormDoor} style={{ cursor: "pointer" }} className="addNewTagTitleModal">ایجاد تگ جدید؟</span>
 
                 {isTagOpen &&
                     <form className="tagForm" >

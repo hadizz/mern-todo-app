@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Tag from "../assets/img/tag.svg"
-
-// import SvgIcon from '@material-ui/core/SvgIcon';
-// // or
-// import { SvgIcon } from '@material-ui/core';
 
 import { Label, Edit, Delete } from '@material-ui/icons'
 
+import Modal from "./modal"
 
-export default function todo({ details }) {
+export default function Todo({ details }) {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <div className="todoBox">
@@ -19,11 +22,21 @@ export default function todo({ details }) {
             <span>{details.tag.name}</span>
           </div>
           <div className="functions">
-            <Edit className="tag-icon" style={{ color: "rgba(200, 200, 200)", marginRight: 5 }} />
+            <Edit className="tag-icon" onClick={handleShow} style={{ color: "rgba(200, 200, 200)", marginRight: 5 }} />
             <Delete className="tag-icon" style={{ color: "rgba(200, 200, 200)" }} />
           </div>
         </div>
       </div>
+
+      <Modal
+        show={show}
+        close={handleClose}
+        header={"ادیت تسک"}
+        preTask={details.description}
+        tag={details.tag}
+      >
+      </Modal>
+
     </>
   );
 }

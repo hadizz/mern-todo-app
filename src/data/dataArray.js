@@ -10,15 +10,15 @@ export const tags = [
 ];
 
 export const todos = [
-    { id: 1, date: "2019/01/01", description: "لندینگ پرسه", tag: { name: "کار", color: "orange" } },
-    { id: 2, date: "2019/01/02", description: "پروژه سیستم عامل", tag: { name: "دانشگاه", color: "green" } },
-    { id: 3, date: "2019/01/03", description: "مک بوک پرو :)", tag: { name: "خرید", color: "yellow" } },
-    { id: 4, date: "2019/01/05", description: "شروع می‌کنیم", tag: { name: "پروژه", color: "blue" } },
-    { id: 6, date: "2019/01/10", description: "تسک 5", tag: { name: "ددلاین", color: "purple" } },
-    { id: 7, date: "2019/01/15", description: "تسک 6", tag: { name: "ورزش", color: "pink" } },
-    { id: 8, date: "2019/02/01", description: "تسک 7", tag: { name: "بهداشت", color: "lightblue" } },
-    { id: 5, date: "2019/02/08", description: "تسک 8", tag: { name: "قرار", color: "#00fff2" } },
-    { id: 9, date: "2019/03/01", description: "تسک 9", tag: { name: "کار", color: "orange" } },
-    { id: 10, date: "2019/09/01", description: "تسک 10", tag: { name: "کار", color: "orange" } },
-    { id: 11, date: "2019/11/01", description: "تسک 11", tag: { name: "کار", color: "orange" } },
+    { id: 1, date: "2019/01/01", description: "لندینگ پرسه", tag: tags[0] },
+    { id: 2, date: "2019/01/02", description: "پروژه سیستم عامل", tag: tags[1] },
+    { id: 3, date: "2019/01/03", description: "مک بوک پرو :)", tag: tags[2] },
+    { id: 4, date: "2019/01/05", description: "دیجیکالا", tag: tags[3] },
+    { id: 6, date: "2019/01/10", description: "تسک 5", tag: tags[4] },
+    { id: 7, date: "2019/01/15", description: "تسک 6", tag: tags[5] },
+    { id: 8, date: "2019/02/01", description: "تسک 7", tag: tags[6] },
+    { id: 5, date: "2019/02/08", description: "تسک 8", tag: tags[7] },
+    { id: 9, date: "2019/03/01", description: "تسک 9", tag: tags[0] },
+    { id: 10, date: "2019/09/01", description: "تسک 10", tag: tags[1] },
+    { id: 11, date: "2019/11/01", description: "تسک 11", tag: tags[2] },
 ];

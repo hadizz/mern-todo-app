@@ -269,7 +269,7 @@ header {
     flex: 1; */
   }
 
-  /* ::-webkit-scrollbar-track {
+  ::-webkit-scrollbar-track {
     -webkit-box-shadow: none !important;
     background-color: transparent;
   }
@@ -279,7 +279,7 @@ header {
   }
   ::-webkit-scrollbar-thumb {
     background-color: transparent;
-  } */
+  }
 }
 
 /*

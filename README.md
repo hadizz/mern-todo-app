@@ -1,7 +1,7 @@
 # Mern Todo App
 
 this is a MERN Todo App. Front end is React JS and Backend technologies is EXpress, Node.js, Mongo Database.
-![preview of todo list app](./todo-list.PNG)
+![preview of todo list app](./todo-list.png)
 
 ## Running Locally
 
@@ -118,12 +118,12 @@ npm run dev
   - [x] Create todo form
   - [x] Show todos in a list
   - [x] Change app language to persian & change direction to rtl
-  - [ ] Make UI responsive and better
+  - [ ] Make UI responsive and better -> working on!
 - [x] Backend
   - [x] Create basic API with Express
   - [x] Create online database (https://www.mongodb.com/cloud/atlas)
   - [x] CRUD
-- [x] Connect Front to Back
+- [ ] Connect Front to Back - need UI to be Completed
 - [ ] Redux
 
 ## Resources
