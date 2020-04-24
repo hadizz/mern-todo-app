@@ -87,7 +87,7 @@ export default function Modal(props) {
                             <Close
                                 onClick={() => {
                                     props.close();
-                                    setHeight(170);
+                                    setHeight(240);
                                     setStat(false);
                                     setStatMsg([0, ""]);
                                     setIsBtnClicked(false);
