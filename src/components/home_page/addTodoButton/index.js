@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from "react";
+import './style.css'
 
 import AddTodoModal from './addTodoModal'
 

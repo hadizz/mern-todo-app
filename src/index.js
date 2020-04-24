@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import TodosHome from "./components/todosHome";
-import './App.css'
+import Home from "./screens/Home";
 
 ReactDOM.render(
   <React.StrictMode>
-    <TodosHome />
+    <Home />
   </React.StrictMode>,
   document.getElementById("root")
 );

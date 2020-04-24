@@ -1,0 +1,44 @@
+
+.upcoming {
+    width: 70%;
+    margin: 1rem auto 0px auto;
+  }
+  .upcoming h2 {
+    font-size: 20px;
+    direction: rtl;
+    margin-bottom: 1rem;
+  }
+  .card {
+    background-color: white;
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+  }
+  .card h4 {
+    color: rgb(85, 93, 114);
+    direction: rtl;
+  }
+
+  @media screen and (max-width: 960px) {
+
+.upcoming {
+    width: 90%;
+    margin-bottom: 2.5rem;
+  }
+  .upcoming h2 {
+    font-size: 22px;
+    margin-right: 10px;
+    direction: rtl;
+  }
+  .card h4 {
+    font-size: 20px;
+    margin-right: 8px;
+    margin-bottom: 20px;
+  }
+
+
+}
+
+
+
+
+

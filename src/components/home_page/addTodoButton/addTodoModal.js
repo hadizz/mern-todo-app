@@ -4,7 +4,7 @@ import { CirclePicker } from 'react-color';
 
 import './addTodoModal.css';
 
-import { tags } from '../data/dataArray'
+import { tags } from '../../../data/dataArray'
 
 const AddTodoModal = ({ isOpen, onClose }) => {
 

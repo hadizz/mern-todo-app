@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Tag from "../assets/img/tag.svg"
+import './todo.css'
 
 import { Label, Edit, Delete } from '@material-ui/icons'
 

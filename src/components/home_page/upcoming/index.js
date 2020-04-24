@@ -1,7 +1,9 @@
 import React from "react";
+import './style.css'
+
 import Todo from "./todo";
 
-import { todos } from '../data/dataArray'
+import { todos } from '../../../data/dataArray'
 
 function upcoming() {
   return (

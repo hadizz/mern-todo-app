@@ -1,7 +1,7 @@
-import React, { useState, useCallback, setTimeout } from 'react'
+import React, { useState, useCallback } from 'react'
 import { Close } from '@material-ui/icons'
 import './modal.css'
-import { tags } from "../data/dataArray"
+import { tags } from "../../../data/dataArray"
 
 // import CircularProgress from '@material-ui/core/CircularProgress';
 
