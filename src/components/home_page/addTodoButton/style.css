@@ -2,7 +2,15 @@
     position: fixed;
     bottom: 0;
     right: 0;
-    margin: 20px;
+    margin: 15px;
+}
+.addIcon-pc{
+    display: block;
+    position: relative;
+    top:5px;
+}
+.addIcon-mob{
+    display: none;
 }
 .addTodoBtn button {
     color: white;
@@ -10,8 +18,13 @@
     background-color: #12192e;
     border-style: none;
   
-    padding:20px;
-    border-radius: 20px;
+    padding:10px;
+    border-radius: 100px;
+}
+.addCircleIcon{
+    position: relative;
+    top:6px;
+    margin-right: 10px;
 }
 
 @media screen and (max-width: 960px) {
@@ -23,6 +36,12 @@
     
         margin:0;
     }
+    .addIcon-pc{
+        display: none;
+    }
+    .addIcon-mob{
+        display: block;
+    }
     .addTodoBtn button {
         width: 100%;
         height: 50px;
@@ -30,7 +49,6 @@
         font-size: 20px;
         background-color: #12192e;
         border-style: none;
-    
         padding:0;
         border-radius: 0;
     }

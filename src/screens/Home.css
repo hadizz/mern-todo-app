@@ -8,6 +8,7 @@
 body {
   background-color: #f3f4f9;
   color: #122045;
+  margin: 0 auto 0 auto;
 }
 
 /*    P H O N E    */
@@ -18,7 +19,7 @@ body {
     background-color: transparent;
   }
   ::-webkit-scrollbar {
-    width: 3px !important;
+    width: 0px !important;
     background-color: transparent;
   }
   ::-webkit-scrollbar-thumb {
