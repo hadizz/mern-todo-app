@@ -9,11 +9,15 @@ body {
   background-color: #f3f4f9;
   color: #122045;
   margin: 0 auto 0 auto;
+  width:70%;
 }
 
 /*    P H O N E    */
 
 @media screen and (max-width: 960px) {
+  body{
+    width:90%;
+  }
   ::-webkit-scrollbar-track {
     -webkit-box-shadow: none !important;
     background-color: transparent;

@@ -1,7 +1,5 @@
 .header-section{
     margin: 2rem auto 0 auto;
-    width: 70%;
-
     display: flex;
     justify-content: space-between;
 }
@@ -25,9 +23,7 @@
 }
 
 @media screen and (max-width: 960px) {
-
     .header-section{
         margin-top: 1.5rem;
-        width:90%;
       }
 }

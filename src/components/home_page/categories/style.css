@@ -1,7 +1,6 @@
 .categories {
   margin: 40px auto 0px auto;
   margin-top: 20px;
-  width: 70%;
 }
 .categories h2 {
   direction: rtl;
@@ -42,7 +41,6 @@
   
   .categories {
     margin: 2rem auto 0px auto;
-    width: 90%;
   }
   .categories h2 {
     font-size: 22px;
