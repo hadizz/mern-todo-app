@@ -1,23 +1,24 @@
-import React from "react";
-import './style.css'
+import React from 'react'
+import './header.css'
 
-function headerSection() {
+import { Menu } from '@material-ui/icons'
+import NotificationsIcon from '@material-ui/icons/Notifications';
+
+function Header() {
   return (
-    <div>
-      <header>
-        <div className="more">
-          <img src={require("../../../assets/img/open-menu.svg")}></img>
+    <div className="header-section">
+      <div className="left">
+        <NotificationsIcon style={{ fontSize: 40 }} />
+      </div>
+      <div className="right">
+        <div className="info">
+          <span className="title">تسک‌ها</span>
+          <span className="description">چه برنامه‌ای دارید؟</span>
         </div>
-        <div className="title">
-          <h2>تسک‌ها</h2>
-          <h4>چه برنامه‌ای دارید؟</h4>
-        </div>
-        <div className="notifications">
-          <img src={require("../../../assets/img/bell.svg")}></img>
-        </div>
-      </header>
+        <Menu style={{ fontSize: 50 }} />
+      </div>
     </div>
-  );
+  )
 }
 
-export default headerSection;
+export default Header;
