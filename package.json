@@ -12,6 +12,7 @@
     "react": "^16.13.1",
     "react-color": "^2.18.0",
     "react-dom": "^16.13.1",
+    "react-flickity-component": "3.4.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {

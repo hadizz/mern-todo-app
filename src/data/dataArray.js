@@ -7,6 +7,11 @@ export const tags = [
     { name: "ورزش", color: "pink" },
     { name: "بهداشت", color: "lightblue" },
     { name: "قرار", color: "yellow" },
+    { name: "تگ ", color: "black" },
+    { name: "تگ ", color: "#8f8f8f" },
+    { name: "تگ ", color: "#ff7878" },
+    { name: "تگ ", color: "#00ffe5" },
+    { name: "تگ ", color: "#70ad42" },
 ];
 
 export const todos = [
