@@ -5,7 +5,7 @@ export const tags = [
     { name: "پروژه", color: "blue" },
     { name: "ددلاین", color: "purple" },
     { name: "ورزش", color: "pink" },
-    { name: "بهداشت", color: "lightblue" },
+    { name: "مسافرت", color: "lightblue" },
     { name: "قرار", color: "yellow" },
     { name: "تگ ", color: "black" },
     { name: "تگ ", color: "#8f8f8f" },
