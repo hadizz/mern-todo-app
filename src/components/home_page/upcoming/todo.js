@@ -29,8 +29,8 @@ export default function Todo({ details }) {
             <span>{details.tag.name}</span>
           </div>
           <div className="functions" style={{ display: active ? "block" : "none" }}>
-            <Edit className="tag-icon" onClick={handleShow} style={{ color: "rgba(200, 200, 200)", marginRight: 5 }} />
-            <Delete className="tag-icon" style={{ color: "rgba(200, 200, 200)" }} />
+            <Edit className="tag-icon" onClick={handleShow} style={{ cursor: "pointer", color: "rgba(200, 200, 200)", marginRight: 5 }} />
+            <Delete className="tag-icon" style={{ cursor: "pointer", color: "rgba(200, 200, 200)" }} />
           </div>
         </div>
       </div>
