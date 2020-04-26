@@ -38,7 +38,6 @@ export default function Todo({ details }) {
       <Modal
         show={show}
         close={handleClose}
-        header={"ادیت تسک"}
         preTask={details.description}
         tag={details.tag}
       >
