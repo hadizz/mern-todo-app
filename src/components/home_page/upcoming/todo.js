@@ -21,7 +21,7 @@ export default function Todo({ details }) {
 
   return (
     <>
-      <div className="todoBox" onClick={handleActive} style={{ cursor: active ? "default" : "pointer", transform: active ? "scale(1.03)" : "scale(1)", boxShadow: active ? `0 0 20px -10px ${details.tag.color}` : "0 0 0 0 rgb(0,0,0)", borderColor: active ? details.tag.color : "#eff0f5" }}>
+      <div className="todoBox" onClick={handleActive} style={{ cursor: active ? "default" : "pointer", transform: active ? "scale(1.028)" : "scale(1)", boxShadow: active ? `0 0 20px -10px ${details.tag.color}` : "0 0 0 0 rgb(0,0,0)", borderColor: active ? details.tag.color : "#eff0f5" }}>
         <span className="todobox-line1">{details.description}</span>
         <div className="todobox-line2">
           <div className="tag-info">
