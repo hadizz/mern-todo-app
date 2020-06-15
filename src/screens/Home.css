@@ -12,6 +12,18 @@ body {
   width:70%;
 }
 
+.style1{
+  font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-weight: 100;
+}
+
+.style2{
+  color: #cccccc; text-decoration: none;
+}
+
+.style3{
+  color: #cccccc; text-decoration: none;
+}
+
 /*    P H O N E    */
 
 @media screen and (max-width: 960px) {
