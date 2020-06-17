@@ -24,7 +24,7 @@ const AddTodoBtn = () => {
   return (
     <div>
       <div className="addTodoBtn">
-        <button onClick={openModal}>
+        <button className="btnWrap" onClick={openModal}>
           <div className="addIcon-pc">
             <AddIcon style={{ marginRight: 5, marginLeft: 5 }} />
           </div>

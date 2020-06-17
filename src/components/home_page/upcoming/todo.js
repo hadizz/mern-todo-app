@@ -13,10 +13,7 @@ export default function Todo({ details }) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const handleActive = () => {
-    console.log("clicked on todo box");
-    console.log("active : " + active);
     setActive(!active);
-    console.log("active : " + active);
   }
 
   return (
@@ -40,8 +37,7 @@ export default function Todo({ details }) {
         close={handleClose}
         preTask={details.description}
         tag={details.tag}
-      >
-      </Modal>
+      />
 
     </>
   );

@@ -1,3 +1,6 @@
+.btnWrap{
+    cursor: pointer;
+}
 .addTodoBtn {
     position: fixed;
     bottom: 0;

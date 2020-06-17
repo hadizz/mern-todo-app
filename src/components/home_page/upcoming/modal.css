@@ -54,10 +54,11 @@
 .edit-modal-form-select{
     direction: rtl;
     outline: none;
-    border-radius: 5;
-    margin-top: 5;
-    padding: 1px;
-    font-size: 16;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 14px;
+    border-style: none;
 }
 .edit-modal-form button{
     width:auto;
@@ -83,11 +84,11 @@
         margin:0;
     }
 
-    .edit-modal-close{
-        display: none;
-    }
     .edit-modal-header h3{
         font-size: 25px;
+    }
+    .edit-modal-close{
+        display: none;
     }
     .edit-modal-arrow{
         display: block;

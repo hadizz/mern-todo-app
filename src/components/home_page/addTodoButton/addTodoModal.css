@@ -4,22 +4,144 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0.651);
+    z-index: 1;
+    overflow-y: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 300px;
-    height: 200px;
     margin: auto;
+    width:300px; /* it can be deleted */
     background-color: #f5f5f5;
-    border: 3px solid #aaa;
-    border-radius: 5px;
-    text-align: right;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.add-modal-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.add-modal-header-close{
+    display: block;
+}
+.add-modal-header-arrow{
+    display: none;
+}
+
+.add-modal-form{
+    /* background-color:blue; */
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 auto 0; 
+}
+.add-modal-form-input{
     direction: rtl;
-    padding: 10px 30px 0 0;
+    padding: 10px 10px 10px 10px;
+    margin: 5px 0 5px 0;
+    border: 0px;
+    border-Radius: 10px;
+    outline: none;
+    font-Size: 16;
+}
+.add-modal-form-select{
+    direction: rtl;
+    outline: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 14px;
+    border-style: none;
+}
+.add-modal-form-option{
+    border-style: none;
+    outline: none;
+}
+
+.add-modal-form-new-tag-input{
+    direction: rtl;
+    padding: 10px 10px 10px 10px;
+    margin: 8px 0 22px 0;
+    border: 0px;
+    border-Radius: 10px;
+    outline: none;
+    font-Size: 16;
+}
+.add-modal-from-new-tag-title{
+    direction: rtl;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.add-modal-form button{
+    width:auto;
+    margin: 12px 0 5px 0;
+    color: white;
+    font-weight: 400;
+    font-size: 16;
+    padding: 5px 7px 5px 7px;
+    border: 0px;
+    border-radius: 8px;
+    outline: none;
+}
+
+@media screen and (max-width: 960px) {
+
+    .modal-container{
+        display: flex;
+        flex-direction:column;
+        height:100%;
+        width:100%;
+        border-radius: 0;
+        margin:0;
+    }
+
+    .add-modal-header h3{
+        font-size: 25px;
+    }
+    .add-modal-header-close{
+        display: none;
+    }
+    .add-modal-header-arrow{
+        display: block;
+    }   
+
+    .add-modal-center{
+        /* background-color:red; */
+        height:100%;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        padding:10px;
+    }
+
+    .add-modal-form{
+        margin:auto 0 auto 0;
+    }
+    .add-modal-form-input{
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .add-modal-form-select{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .add-modal-form-new-tag-input{
+        font-size: 16px;
+    }
+    .add-modal-from-new-tag-title{
+        font-size: 15px;
+    }
+
+    .add-modal-form button{
+        height: 40px;
+    }
+
 }
