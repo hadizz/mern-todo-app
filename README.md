@@ -3,7 +3,7 @@
 this is a MERN Todo App. Front end is React JS and Backend technologies is EXpress, Node.js, Mongo Database.
 
 <p align="center">
-  <img style="width:75%; height:75%" src="./todo-list.PNG">
+  <img style="width:75%; height:75%" src="./todo-list.png">
 </p>
 
 ## Running Locally
