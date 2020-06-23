@@ -5,13 +5,18 @@ import { Label, Edit, Delete } from '@material-ui/icons'
 
 import Modal from "./modal"
 
-export default function Todo({ details }) {
+export default function Todo({details, tags, deleteTodo, modifyTodo }) {
 
   const [show, setShow] = useState(false);
   const [active, setActive] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleDelete = () => {
+    console.log('delete icon clicked!!!');
+    deleteTodo(details.id);
+    // dispatch(deleteTODO(details.id));
+  }
   const handleActive = () => {
     setActive(!active);
   }
@@ -27,7 +32,7 @@ export default function Todo({ details }) {
           </div>
           <div className="functions" style={{ display: active ? "block" : "none" }}>
             <Edit className="tag-icon" onClick={handleShow} style={{ cursor: "pointer", color: "rgba(200, 200, 200)", marginRight: 5 }} />
-            <Delete className="tag-icon" style={{ cursor: "pointer", color: "rgba(200, 200, 200)" }} />
+            <Delete className="tag-icon" onClick={handleDelete} style={{ cursor: "pointer", color: "rgba(200, 200, 200)" }} />
           </div>
         </div>
       </div>
@@ -35,8 +40,9 @@ export default function Todo({ details }) {
       <Modal
         show={show}
         close={handleClose}
-        preTask={details.description}
-        tag={details.tag}
+        thisTodo={details}
+        tags={tags}
+        modifyTodo={modifyTodo}
       />
 
     </>

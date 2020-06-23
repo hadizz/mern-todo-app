@@ -1,46 +1,39 @@
 import React, { useState, useCallback } from "react";
 import { Close } from "@material-ui/icons";
-import "./modal.css";
+// import "./modal.css";
 import DoneRoundedIcon from "@material-ui/icons/DoneRounded";
 import DoneAllRoundedIcon from "@material-ui/icons/DoneAllRounded";
 import ArrowBackIosRoundedIcon from "@material-ui/icons/ArrowBackIosRounded";
+import { HuePicker } from "react-color";
 
-export default function Modal({show, close, thisTodo, tags, modifyTodo}) {
-  const [task, setTask] = useState(thisTodo.description);
-  const [selectedTag, setSelectedTag] = useState(thisTodo.tag.name);
-  
+export default function Modal({ show, close, tags, addTag }) {
+  const [tag, setTag] = useState("");
+  const [color, setColor] = useState("#fff");
+  const [sctc, setSctc] = useState("black");
+
   const [stat, setStat] = useState(false);
   const [statMsg, setStatMsg] = useState([0, ""]);
   const [isBtnClicked, setIsBtnClicked] = useState(false);
 
-  const onEditTaskChange = useCallback((event) => {
-    setTask(event.target.value);
+  const onEditTagChange = useCallback((event) => {
+    setTag(event.target.value);
   }, []);
 
   const handleSubmit = (event) => {
     console.log("hale clicked");
 
-    console.log('task: ', task);
-    console.log('selectedTag: ', selectedTag);
-    
-    if (selectedTag === thisTodo.tag.name ) {
-      modifyTodo(thisTodo.id, '1399/01/01', task, thisTodo.tag);
-    } else {
-      const stag = tags.filter(t => t.name === selectedTag)[0];
-      modifyTodo(thisTodo.id, '1399/01/01', task, stag);
-    }
-
+    addTag(tag, color);
     // const t = '';
     // modifyTodo(',',',',',','');
 
     setIsBtnClicked(true);
     setStat(true);
     setStatMsg([0, "با موفقیت ادیت شد"]);
-  };
 
-  const onSelectedTag = useCallback((event) => {
-    setSelectedTag(event.target.value);
-  }, []);
+    setTag("");
+    setColor("#fff");
+    setSctc("black");
+  };
 
   const ShowStatus = () => {
     if (!stat) {
@@ -103,35 +96,41 @@ export default function Modal({show, close, thisTodo, tags, modifyTodo}) {
                   style={{ cursor: "pointer", fontSize: 35 }}
                 />
               </div>
-              <h3 style={{ cursor: "default" }}>ویرایش تسک</h3>
+              <h3 style={{ cursor: "default" }}>تگ جدید</h3>
             </div>
 
             <div className="edit-modal-center">
               {/* form */}
               <form onSubmit={handleSubmit} className="edit-modal-form">
-
                 <input
                   className="edit-modal-form-input"
-                  value={task}
-                  onChange={onEditTaskChange}
+                  placeholder="تگ جدیدتو بنویس"
+                  value={tag}
+                  onChange={onEditTagChange}
                 ></input>
 
-                <select 
-                  value={selectedTag}
-                  onChange={onSelectedTag}
-                  className="edit-modal-form-select"
+                <div style={{ marginTop: 20 }}>
+                  <HuePicker
+                    color={color}
+                    onChange={(color) => {
+                      setColor(color.hex);
+                      setSctc("white");
+                    }}
+                  />
+                </div>
+
+                <center
+                  style={{
+                    color: sctc,
+                    marginTop: 20,
+                    height: 40,
+                    background: color,
+                    padding: 10,
+                  }}
                 >
-                  {tags.map((tag) => (
-                    <option
-                      key={tag.id}
-                      value={tag.name}
-                      selected={tag.name === tag.name}
-                    >
-                      {tag.name}
-                    </option>
-                  ))}
-                </select>
-                
+                  رنگ انتخاب شده
+                </center>
+
                 <button
                   onClick={handleSubmit}
                   style={{
@@ -158,7 +157,6 @@ export default function Modal({show, close, thisTodo, tags, modifyTodo}) {
                     </span>
                   </div>
                 </button>
-              
               </form>
 
               {/* status */}
@@ -170,3 +168,8 @@ export default function Modal({show, close, thisTodo, tags, modifyTodo}) {
     </>
   );
 }
+
+HuePicker.defaultProps = {
+  width: "100%",
+  height: "16px",
+};

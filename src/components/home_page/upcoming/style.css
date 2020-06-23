@@ -1,7 +1,13 @@
-
 .upcoming {
-    margin: 1rem auto 0px auto;
+    margin: 1.5rem auto 0px auto;
 }
+.notasks-icon{
+  width:40%;
+}
+.notasks-title{
+  font-size: 20px;
+}
+
 .upcoming h2 {
   font-size: 20px;
   direction: rtl;
@@ -12,6 +18,8 @@
   border-radius: 20px 20px 0 0;
   padding: 20px;
   box-shadow: 0 0 25px -10px rgba(0, 0, 0, 0.25);
+
+  min-height: 75vh;
 }
 .card h4 {
   color: rgb(85, 93, 114);
@@ -23,6 +31,14 @@
   .upcoming {
     margin-bottom: 2.5rem;
   }
+
+  .notasks-icon{
+    width:70%;
+  }
+  .notasks-title{
+    font-size: 18px;
+  }
+
   .upcoming h2 {
     font-size: 22px;
     margin-right: 10px;

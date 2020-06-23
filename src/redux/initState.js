@@ -1,0 +1,93 @@
+export const initTags = [
+  { id: 0, name: "کار", color: "orange" },
+  { id: 1, name: "دانشگاه", color: "green" },
+  { id: 2, name: "خرید", color: "red" },
+  { id: 3, name: "پروژه", color: "blue" },
+  { id: 4, name: "ددلاین", color: "purple" },
+  { id: 5, name: "ورزش", color: "pink" },
+  { id: 6, name: "مسافرت", color: "lightblue" },
+  { id: 7, name: "قرار", color: "yellow" },
+  { id: 8, name: "تعمیر ", color: "black" },
+];
+
+export const initTodos = {
+  todos: [
+    // {
+    //   id: 1,
+    //   done: false,
+    //   date: "2019/01/01",
+    //   description: "لندینگ پرسه",
+    //   tag: tags[0],
+    // },
+    // {
+    //   id: 2,
+    //   done: false,
+    //   date: "2019/01/02",
+    //   description: "پروژه سیستم عامل",
+    //   tag: tags[1],
+    // },
+    // {
+    //   id: 3,
+    //   done: false,
+    //   date: "2019/01/03",
+    //   description: "مک بوک پرو :)",
+    //   tag: tags[2],
+    // },
+    // {
+    //   id: 4,
+    //   done: false,
+    //   date: "2019/01/05",
+    //   description: "دیجیکالا",
+    //   tag: tags[3],
+    // },
+    // {
+    //   id: 6,
+    //   done: false,
+    //   date: "2019/01/10",
+    //   description: "تسک 5",
+    //   tag: tags[4],
+    // },
+    // {
+    //   id: 7,
+    //   done: false,
+    //   date: "2019/01/15",
+    //   description: "تسک 6",
+    //   tag: tags[5],
+    // },
+    // {
+    //   id: 8,
+    //   done: false,
+    //   date: "2019/02/01",
+    //   description: "تسک 7",
+    //   tag: tags[6],
+    // },
+    // {
+    //   id: 5,
+    //   done: false,
+    //   date: "2019/02/08",
+    //   description: "تسک 8",
+    //   tag: tags[7],
+    // },
+    // {
+    //   id: 9,
+    //   done: false,
+    //   date: "2019/03/01",
+    //   description: "تسک 9",
+    //   tag: tags[0],
+    // },
+    // {
+    //   id: 10,
+    //   done: false,
+    //   date: "2019/09/01",
+    //   description: "تسک 10",
+    //   tag: tags[1],
+    // },
+    // {
+    //   id: 11,
+    //   done: false,
+    //   date: "2019/11/01",
+    //   description: "تسک 11",
+    //   tag: tags[2],
+    // },
+  ],
+};

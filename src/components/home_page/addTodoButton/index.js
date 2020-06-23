@@ -5,7 +5,10 @@ import AddTodoModal from './addTodoModal'
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import AddIcon from '@material-ui/icons/Add';
 
-const AddTodoBtn = () => {
+import { connect } from "react-redux";
+import { todoAdd, tagAdd } from "../../../redux/actions";
+
+const AddTodoBtn = ({todos, tags, addTodo, addTag}) => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -34,11 +37,25 @@ const AddTodoBtn = () => {
           </div>
         </button>
       </div>
-      <AddTodoModal isOpen={isModalOpen} onClose={closeModal} />
+      <AddTodoModal 
+        isOpen={isModalOpen} 
+        onClose={closeModal} 
+        addTodo={addTodo}
+        addTag={addTag}
+        tags={tags}
+      />
     </div>
   );
 }
 
+const mapStateToProps = (state) => ({
+  todos: state.todos,
+  tags: state.tags
+});
 
+const mapDispatchToProps = (dispatch) => ({
+  addTodo: (date, description, tag) => dispatch(todoAdd(date, description, tag)),
+  addTag: (name, color) => dispatch(tagAdd(name, color)),
+});
 
-export default AddTodoBtn;
+export default connect(mapStateToProps, mapDispatchToProps)(AddTodoBtn);

@@ -1,14 +1,12 @@
-import React, { useState, useCallback } from "react";
-import { HuePicker, HuePickerProps } from "react-color";
+import React, { useState, useCallback} from "react";
+import { HuePicker } from "react-color";
 import "./addTodoModal.css";
-import { tags } from "../../../data/dataArray";
-
 import { Close } from "@material-ui/icons";
 import DoneRoundedIcon from "@material-ui/icons/DoneRounded";
 import DoneAllRoundedIcon from "@material-ui/icons/DoneAllRounded";
 import ArrowBackIosRoundedIcon from "@material-ui/icons/ArrowBackIosRounded";
 
-const AddTodoModal = ({ isOpen, onClose }) => {
+const AddTodoModal = ({ isOpen, onClose, addTodo, addTag, tags }) => {
   const [isBtnClicked, setIsBtnClicked] = useState(false);
   const [sctc, setSctc] = useState("black");
 
@@ -33,6 +31,20 @@ const AddTodoModal = ({ isOpen, onClose }) => {
         "\nnewTagColor: " +
         newTagColor
     );
+    
+    if (newTaskText !== '') {
+
+      if (isTagOpen){
+        addTag(newTagText, newTagColor);
+        addTodo('1399/01/01', newTaskText, {id: tags.length, name: newTagText, color: newTagColor});
+      }
+      else {
+        const stag = tags.filter(t => t.name === newTaskTag)[0];
+        console.log('stag: ', stag);
+        addTodo('1399/01/01', newTaskText, stag);
+      }
+
+    }
 
     // be aware of isbtnclicked value !!! ( maybe just visit this modal and don't wwant a new task )
 
@@ -111,10 +123,10 @@ const AddTodoModal = ({ isOpen, onClose }) => {
               className="add-modal-form-select"
               disabled={isTagOpen}
             >
-              {tags.map((tag, index) => (
+              {tags.map((tag) => (
                 <option
                   className="add-modal-form-option"
-                  key={index}
+                  key={tag.id}
                   value={tag.name}
                 >
                   {tag.name}
@@ -123,14 +135,17 @@ const AddTodoModal = ({ isOpen, onClose }) => {
             </select>
 
             {/* create new tag */}
-            <span
-              onClick={tagFormDoor}
-              style={{ cursor: "pointer" }}
-              className="add-modal-from-new-tag-title"
-            >
-              ایجاد تگ جدید؟
-            </span>
-
+            {isTagOpen ?( 
+              <h4 onClick={tagFormDoor} style={{ direction: 'rtl' , marginTop: 15, marginRight: 10, cursor: "pointer" }}> - تگ جدید</h4>
+            ):(
+              <span
+                onClick={tagFormDoor}
+                style={{ cursor: "pointer" }}
+                className="add-modal-from-new-tag-title"
+              >
+                ایجاد تگ جدید؟  
+              </span>
+            )}
             {isTagOpen && (
               <>
                 <input

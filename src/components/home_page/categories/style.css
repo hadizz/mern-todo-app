@@ -1,10 +1,42 @@
 .categories {
   margin: 40px auto 0px auto;
-  margin-top: 20px;
+  margin-top: 25px;
 }
-.categories h2 {
+.categorie-header{
+  display: flex;
+  flex-direction: row;
   direction: rtl;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.categories-title {
   font-size: 20px;
+  margin-left: 10px;
+}
+.categories-btn{
+  color: white;
+  width: 135px;
+  border-radius: 20px;
+  flex-direction: row;
+  align-items: center;
+  background-color: #122045;
+  padding: 0px 10px 8px 0px;
+
+  cursor: pointer;
+}
+.categories-btn-span{
+  font-size: 13px;
+}
+.categories-btn-icon{
+  position: relative;
+  top: 7px;
+  margin-right: 5px;
+}
+
+.carousel-wrap{
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: auto;
 }
 .carousel-cell{
   margin: 10px;
@@ -36,7 +68,7 @@
   .categories {
     margin: 2rem auto 0px auto;
   }
-  .categories h2 {
+  .categories-title {
     font-size: 22px;
     margin-right: 10px;
   }
