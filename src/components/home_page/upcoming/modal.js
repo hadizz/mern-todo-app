@@ -23,19 +23,21 @@ export default function Modal({show, close, thisTodo, tags, modifyTodo}) {
     console.log('task: ', task);
     console.log('selectedTag: ', selectedTag);
     
-    if (selectedTag === thisTodo.tag.name ) {
-      modifyTodo(thisTodo.id, '1399/01/01', task, thisTodo.tag);
-    } else {
-      const stag = tags.filter(t => t.name === selectedTag)[0];
-      modifyTodo(thisTodo.id, '1399/01/01', task, stag);
+    if (task === ""){
+      setStatMsg([2, "!تسک نمی‌تونه خالی باشه"]);
     }
-
-    // const t = '';
-    // modifyTodo(',',',',',','');
+    else{
+      if (selectedTag === thisTodo.tag.name ) {
+        modifyTodo(thisTodo.id, '1399/01/01', task, thisTodo.tag);
+      } else {
+        const stag = tags.filter(t => t.name === selectedTag)[0];
+        modifyTodo(thisTodo.id, '1399/01/01', task, stag);
+      }
+      setStatMsg([0, "با موفقیت ادیت شد"]);
+    }
 
     setIsBtnClicked(true);
     setStat(true);
-    setStatMsg([0, "با موفقیت ادیت شد"]);
   };
 
   const onSelectedTag = useCallback((event) => {

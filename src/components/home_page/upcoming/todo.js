@@ -27,8 +27,8 @@ export default function Todo({details, tags, deleteTodo, modifyTodo }) {
         <span className="todobox-line1">{details.description}</span>
         <div className="todobox-line2">
           <div className="tag-info">
-            <Label className="tag-icon" style={{ color: details.tag.color }} />
-            <span>{details.tag.name}</span>
+            <Label className="tag-icon" style={{ color: details.tag===null ? 'white' : details.tag.color }} />
+            <span>{details.tag===null ? 'empty' : details.tag.name}</span>
           </div>
           <div className="functions" style={{ display: active ? "block" : "none" }}>
             <Edit className="tag-icon" onClick={handleShow} style={{ cursor: "pointer", color: "rgba(200, 200, 200)", marginRight: 5 }} />

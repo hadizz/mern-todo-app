@@ -1,4 +1,4 @@
-import React, { useState, useCallback} from "react";
+import React, { useState, useCallback } from "react";
 import { HuePicker } from "react-color";
 import "./addTodoModal.css";
 import { Close } from "@material-ui/icons";
@@ -7,15 +7,19 @@ import DoneAllRoundedIcon from "@material-ui/icons/DoneAllRounded";
 import ArrowBackIosRoundedIcon from "@material-ui/icons/ArrowBackIosRounded";
 
 const AddTodoModal = ({ isOpen, onClose, addTodo, addTag, tags }) => {
+
   const [isBtnClicked, setIsBtnClicked] = useState(false);
   const [sctc, setSctc] = useState("black");
 
   const [newTaskText, setNewTaskText] = useState("");
-  const [newTaskTag, setNewTaskTag] = useState(tags[0].name);
+  const [newTaskTag, setNewTaskTag] = useState("یه تگ انتخاب کن");
 
   const [isTagOpen, setIsTagOpen] = useState(false);
   const [newTagText, setNewTagText] = useState("");
   const [newTagColor, setNewTagColor] = useState("#fff");
+
+  const [stat, setStat] = useState(false);
+  const [statMsg, setStatMsg] = useState([0, ""]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -31,27 +35,13 @@ const AddTodoModal = ({ isOpen, onClose, addTodo, addTag, tags }) => {
         "\nnewTagColor: " +
         newTagColor
     );
-    
-    if (newTaskText !== '') {
-
-      if (isTagOpen){
-        addTag(newTagText, newTagColor);
-        addTodo('1399/01/01', newTaskText, {id: tags.length, name: newTagText, color: newTagColor});
-      }
-      else {
-        const stag = tags.filter(t => t.name === newTaskTag)[0];
-        console.log('stag: ', stag);
-        addTodo('1399/01/01', newTaskText, stag);
-      }
-
-    }
-
     // be aware of isbtnclicked value !!! ( maybe just visit this modal and don't wwant a new task )
 
+    setStat(false);
     setIsBtnClicked(false);
     setSctc("black");
     setNewTaskText("");
-    setNewTaskTag(tags[0].name);
+    setNewTaskTag("یه تگ انتخاب کن");
     setIsTagOpen(false);
     setNewTagText("");
     setNewTagColor("#fff");
@@ -75,14 +65,78 @@ const AddTodoModal = ({ isOpen, onClose, addTodo, addTag, tags }) => {
     (event) => {
       event.preventDefault();
       setIsTagOpen(!isTagOpen);
-      console.log("tag toggled");
+      // console.log("tag toggled");
     },
     [isTagOpen]
   );
 
   const completeAddNewTask = (event) => {
+    if (newTaskText !== "") {
+      if (isTagOpen) {
+        if (newTagText !== '') {
+          addTag(newTagText, newTagColor);
+          addTodo("1399/01/01", newTaskText, {
+            id: tags.length,
+            name: newTagText,
+            color: newTagColor,
+          });
+          setStatMsg([0, "با موفقیت اضافه شد"]);
+        }
+        else {
+          setStatMsg([2, "!تگ نمی‌تونه خالی باشه"]);
+        }
+      } else { 
+        if( newTaskTag !== "یه تگ انتخاب کن") {
+          const stag = tags.filter((t) => t.name === newTaskTag)[0];
+          // console.log("stag: ", stag);
+          addTodo("1399/01/01", newTaskText, stag);
+          setStatMsg([0, "با موفقیت اضافه شد"]);
+        }
+        else {
+          setStatMsg([2, "!باید یه تگ براش انتخاب کنی"]);
+        }
+      }
+    }
+    else{
+      setStatMsg([2, "!تسک نمی‌تونه خالی باشه"]);
+    }
+    setStat(true);
     setIsBtnClicked(true);
   };
+
+  
+  const ShowStatus = () => {
+    if (!stat) {
+      return null;
+    }
+    switch (statMsg[0]) {
+      case 0:
+        return (
+          <center style={{ color: "green", marginTop: 7, marginBottom: -10 }}>
+            {statMsg[1]}
+          </center>
+        );
+        break;
+      case 1:
+        return (
+          <center style={{ color: "blue", marginTop: 7 }}>{statMsg[1]}</center>
+        );
+        break;
+      case 2:
+        return (
+          <center style={{ color: "red", marginTop: 7 }}>{statMsg[1]}</center>
+        );
+        break;
+      default:
+        return (
+          <center style={{ color: "purple", marginTop: 7 }}>
+            !ارور ناشناخته
+          </center>
+        );
+        break;
+    }
+  };
+
 
   if (!isOpen) {
     return null;
@@ -123,6 +177,10 @@ const AddTodoModal = ({ isOpen, onClose, addTodo, addTag, tags }) => {
               className="add-modal-form-select"
               disabled={isTagOpen}
             >
+              <option
+                className="add-modal-form-option"
+                value={"یه تگ انتخاب کن"}
+              >یه تگ انتخاب کن</option>
               {tags.map((tag) => (
                 <option
                   className="add-modal-form-option"
@@ -135,15 +193,26 @@ const AddTodoModal = ({ isOpen, onClose, addTodo, addTag, tags }) => {
             </select>
 
             {/* create new tag */}
-            {isTagOpen ?( 
-              <h4 onClick={tagFormDoor} style={{ direction: 'rtl' , marginTop: 15, marginRight: 10, cursor: "pointer" }}> - تگ جدید</h4>
-            ):(
+            {isTagOpen ? (
+              <h4
+                onClick={tagFormDoor}
+                style={{
+                  direction: "rtl",
+                  marginTop: 15,
+                  marginRight: 10,
+                  cursor: "pointer",
+                }}
+              >
+                {" "}
+                - تگ جدید
+              </h4>
+            ) : (
               <span
                 onClick={tagFormDoor}
                 style={{ cursor: "pointer" }}
                 className="add-modal-from-new-tag-title"
               >
-                ایجاد تگ جدید؟  
+                ایجاد تگ جدید؟
               </span>
             )}
             {isTagOpen && (
@@ -208,6 +277,8 @@ const AddTodoModal = ({ isOpen, onClose, addTodo, addTag, tags }) => {
               </div>
             </button>
           </form>
+
+          <ShowStatus />
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import Upcoming from "../components/home_page/upcoming";
 import AddTodoBtn from "../components/home_page/addTodoButton/";
 
 const Home = () => {
+  console.log('%c        Hadiz👨🏻‍💻           ', 'background: orange; color: white; font-size:20px');
   return (
     <div>
       {/* <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"

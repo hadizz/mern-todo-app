@@ -22,13 +22,16 @@ export default function Modal({ show, close, tags, addTag }) {
   const handleSubmit = (event) => {
     console.log("hale clicked");
 
-    addTag(tag, color);
-    // const t = '';
-    // modifyTodo(',',',',',','');
+    if ( tag !== "" ) {
+      addTag(tag, color);
+      setStatMsg([0, "با موفقیت ادیت شد"]);
+    }
+    else{
+      setStatMsg([2, "!تگ بی اسم نمی‌تونی ایجاد کنی"]);
+    }
 
     setIsBtnClicked(true);
     setStat(true);
-    setStatMsg([0, "با موفقیت ادیت شد"]);
 
     setTag("");
     setColor("#fff");
